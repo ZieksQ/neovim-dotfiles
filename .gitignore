@@ -1,0 +1,9 @@
+
+# Ignore plugin manager installs
+lazy/
+packer_compiled.lua
+
+# Ignore swap and backup files
+*.swp
+*.swo
+*.bak
