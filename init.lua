@@ -18,7 +18,7 @@ require("lazy").setup({
 	--{ import = "plugins" },
 	require("plugins.neotree"),
 	require("plugins.colortheme"),
-	require("plugins.bufferline"),
+	-- require("plugins.bufferline"),
 	require("plugins.lualine"),
 	require("plugins.treesitter"),
 	require("plugins.telescope"),
@@ -30,6 +30,8 @@ require("lazy").setup({
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
 	require("plugins.roslyn"),
+	require("plugins.harpoon"),
+	require("plugins.ufo"),
 }, {
 	rocks = {
 		enabled = false,

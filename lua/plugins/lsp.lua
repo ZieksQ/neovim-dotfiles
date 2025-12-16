@@ -179,6 +179,11 @@ return {
 		--local capabilities = vim.lsp.protocol.make_client_capabilities()
 		--capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').lsp_capabilities())
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
+		-- Enable LSP folding support for nvim-ufo
+		capabilities.textDocument.foldingRange = {
+			dynamicRegistration = false,
+			lineFoldingOnly = true,
+		}
 		-- Enable the following language servers
 		--
 		-- Add any additional override configuration in the following tables. Available keys are:
