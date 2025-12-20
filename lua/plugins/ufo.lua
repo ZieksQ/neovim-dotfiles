@@ -12,8 +12,8 @@ return {
 		vim.o.foldenable = true
 
 		-- Keymaps (minimal + ergonomic)
-		vim.keymap.set("n", "zR", require("ufo").openAllFolds, { desc = "UFO: Open all folds" })
-		vim.keymap.set("n", "zM", require("ufo").closeAllFolds, { desc = "UFO: Close all folds" })
+		vim.keymap.set("n", "zR", require("ufo").openAllFolds, { desc = "Open all folds" })
+		vim.keymap.set("n", "zM", require("ufo").closeAllFolds, { desc = "Close all folds" })
 		vim.keymap.set("n", "zK", function()
 			local winid = require("ufo").peekFoldedLinesUnderCursor()
 			if not winid then

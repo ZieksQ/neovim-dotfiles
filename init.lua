@@ -32,6 +32,7 @@ require("lazy").setup({
 	require("plugins.roslyn"),
 	require("plugins.harpoon"),
 	require("plugins.ufo"),
+	require("plugins.render-markdown"),
 }, {
 	rocks = {
 		enabled = false,
