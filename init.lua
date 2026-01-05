@@ -33,6 +33,7 @@ require("lazy").setup({
 	require("plugins.harpoon"),
 	require("plugins.ufo"),
 	require("plugins.render-markdown"),
+	require("plugins.tiny-inline-diagnostic"),
 }, {
 	rocks = {
 		enabled = false,
