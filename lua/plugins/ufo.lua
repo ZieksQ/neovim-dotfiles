@@ -10,6 +10,16 @@ return {
 		vim.o.foldlevel = 99 -- open all folds by default
 		vim.o.foldlevelstart = 99
 		vim.o.foldenable = true
+		vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+
+		require("ufo").setup({
+			provider_selector = function(bufnr, filetype, buftype)
+				return { "treesitter", "indent" }
+			end,
+		})
+		-- Set fold colors
+		vim.api.nvim_set_hl(0, "Folded", { bg = "#2a2a3a", fg = "#b4befe" })
+		vim.api.nvim_set_hl(0, "FoldColumn", { fg = "#89b4fa" })
 
 		-- Keymaps (minimal + ergonomic)
 		vim.keymap.set("n", "zR", require("ufo").openAllFolds, { desc = "Open all folds" })
@@ -20,10 +30,5 @@ return {
 				vim.lsp.buf.hover()
 			end
 		end, { desc = "Peek Fold" })
-		require("ufo").setup({
-			provider_selector = function(bufnr, filetype, buftype)
-				return { "lsp", "indent" }
-			end,
-		})
 	end,
 }
